@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400&display=swap');
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border;
+}
+html{
+    font-family: 'Titillium Web', sans-serif;
+    color :white
+}
+.nombre{
+    align-items: center;
+    justify-content: center;
+}
+.titulo{
+    min-height: 10vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0px 0px 0px;
+    background-color: #101010;
+}
+.contenedor{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 0;
+    background-color: #101010;
+}
+.linea{
+    width: 80%;
+    height: auto;
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+}
+.linea ul{
+    list-style: none;
+}
+.linea ul li{
+    padding: 20px;
+    background-color: #1e1f22;
+    color: white;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.contenido ul li:last-child{
+    margin-bottom: 0;
+}
+
+.contenido h1{
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 30px;
+    margin-bottom: 10px;
+}
+
+.contenido p{
+    font-size: 16px;
+    line-height: 30px;
+    font-weight: 300;
+}
+ img{
+    height: 70px;
+    width: 70px;
+    position: absolute;
+    top: -30px;
+    right: 0%;
+}
+.linea .fecha{
+    font-size: 20px;
+    font-weight: 300;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+@media only screen and (min-width:768px){
+    .linea::before{
+        content: '';
+        position: absolute;
+        height: 100%;
+        width: 2px;
+        left: 50%;
+        transform:translateX(-50%);
+        background-color: gray;
+    }
+    .linea ul li{
+        width: 50%;
+        margin-bottom: 50px;
+        position: relative;
+    }
+    .linea ul li:nth-child(odd){
+        float:left;
+        clear: right;
+        transform: translatex(-60px);
+        border-radius: 10px 0px 10px 10px;
+    }
+    .linea ul li:nth-child(even){
+        float: right;
+        clear:left; 
+        transform: translatex(60px);
+        border-radius: 0px 10px 10px 10px;
+    }
+.linea ul li::after{
+    content: '';
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    background-color: gray;
+    border-radius: 50%;
+    top : 0;
+}
+.linea ul li:nth-child(odd)::after{
+transform: translate(50%,-50%);
+    right: 0;
+    transform: translatex(30px);
+}
+.linea ul li:nth-child(even)::after{
+    transform: translate(-50%,50%);
+        left: 0;
+        transform: translatex(-30px);
+    }
+.linea ul li:hover:after{
+        background-color: white;
+    }
+.linea .fecha{
+    position: absolute;
+    top: -30px;
+}
+}
